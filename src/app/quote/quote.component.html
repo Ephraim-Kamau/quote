@@ -1,23 +1,23 @@
 <h1>MY QUOTES</h1>
 <hr>
-<div class="container">
-    <div class="row">
-      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-    </div>
-</div>
   <div class="container">
-<div class="row" *ngFor='let quote of quotes; let i = index'>
-  <div class="row">
-  <h4 id ="{{i}}">{{quote.name}}  {{quote.timePassed|date|uppercase}}</h4>
-  <button class="btn btn-primary" (click) = 'toogleDetails(i)'>View Details</button>
-</div>
-
-  <div class="row" *ngIf="quote.showDescription">
-    <button class="btn btn-success" (click)="upvote(i)">Upvote</button>
-          <button class="btn btn-danger" (click)="downvote">Downvote</button>
-  <app-quote-details  [quote]='quote' (isComplete) = 'deleteQuote($event, i)'></app-quote-details>
+      <div class="row">
+          <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      </div>
   </div>
+    <div class="container">
+        <div class="row" *ngFor='let quote of quotes; let i = index'>
+          <div class="row">
+              <h4 id ="{{i}}">{{quote.name}}  {{quote.timePassed|date|uppercase}}</h4>
+                  <button class="btn btn-primary" (click) = 'toogleDetails(i)'>View Details</button>
+          </div>
 
-  </div>
+    <div class="row" *ngIf="quote.showDescription">
+        <button class="btn btn-success" (click)="upvote(i)">Upvote</button>
+            <button class="btn btn-danger" (click)="downvote">Downvote</button>
+                <app-quote-details  [quote]='quote' (isComplete) = 'deleteQuote($event, i)'></app-quote-details>
+      </div>
+
+    </div>
 
   </div>
