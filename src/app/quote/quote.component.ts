@@ -16,6 +16,9 @@ export class QuoteComponent implements OnInit {
      new Quote(5, 'Moringa School', 'The place to be for all aspiring developers'),
      new Quote(6, 'I know you want my free time','Frech Montana, TY $ Sign, Tinashe'),
    ]
+   toogleDetails(index){
+     this.quotes[index].showDescription = !this.quotes[index].showDescription
+   }
   constructor() { }
 
   ngOnInit() {
