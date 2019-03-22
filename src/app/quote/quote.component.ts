@@ -19,6 +19,13 @@ export class QuoteComponent implements OnInit {
    toogleDetails(index){
      this.quotes[index].showDescription = !this.quotes[index].showDescription
    }
+   addNewQuote(quote){
+          let quoteLength = this.quotes.length;
+          quote.id=quoteLength+1;
+          quote.timePassed = new Date(quote.timePassed)
+          this.quotes.push(quote)
+
+      }
 
    deleteQuote(isComplete, index){
      if (isComplete){
