@@ -6,7 +6,7 @@
   <li  id ="{{i}}">{{quote.name}} Created on {{quote.timePassed|date|uppercase}}</li>
   <button (click) = 'toogleDetails(i)'>Toogle Details</button>
 
-  <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete) = 'completeQuote($event, i)'></app-quote-details>
+  <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete) = 'deleteQuote($event, i)'></app-quote-details>
   </div>
 </ul>
 <p *ngIf='quotes.length > 5'>You have too many goals</p>
