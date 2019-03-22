@@ -26,7 +26,7 @@
                 <input type='date' id="complete"  [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required >
                 <div [hidden]="timePassed.valid || timePassed.pristine" class="alert alert-danger">
                     <p> Submission Date is Required</p>
-</div>
+            </div>
             </div>
             <button type="submit" class="btn btn-success btn-lg">Add Quote</button>
 

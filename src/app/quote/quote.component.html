@@ -8,16 +8,16 @@
   <div class="container">
 <div class="row" *ngFor='let quote of quotes; let i = index'>
   <div class="row">
-  <h4 id ="{{i}}">{{quote.name}} Created on {{quote.timePassed|date|uppercase}}</h4>
+  <h4 id ="{{i}}">{{quote.name}}  {{quote.timePassed|date|uppercase}}</h4>
   <button class="btn btn-primary" (click) = 'toogleDetails(i)'>View Details</button>
 </div>
 
   <div class="row" *ngIf="quote.showDescription">
+    <button class="btn btn-success" (click)="upvote(i)">Upvote</button>
+          <button class="btn btn-danger" (click)="downvote">Downvote</button>
   <app-quote-details  [quote]='quote' (isComplete) = 'deleteQuote($event, i)'></app-quote-details>
   </div>
 
   </div>
 
   </div>
-
-<p *ngIf='quotes.length > 5'>You have too many goals</p>
