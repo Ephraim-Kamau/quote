@@ -9,12 +9,12 @@ import { Quote } from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes = [
-     new Quote(1, 'Today is going to be a wonderful day', 'This is because I am going to make a good project'),
-     new Quote(2, 'I am going to be a great developer', 'And get employed in a good company'),
-     new Quote(3, 'I am El Jefe!!', 'The Boss!'),
-     new Quote(4, 'Selector take your time, take your time','You are going too fast!!'),
-     new Quote(5, 'Moringa School', 'The place to be for all aspiring developers'),
-     new Quote(6, 'I know you want my free time','Frech Montana, TY $ Sign, Tinashe'),
+     new Quote(1, 'Today is going to be a wonderful day', 'This is because I am going to make a good project', new Date(2019,3,22)),
+     new Quote(2, 'I am going to be a great developer', 'And get employed in a good company', new Date(2019,3,22)),
+     new Quote(3, 'I am El Jefe!!', 'The Boss!', new Date(2019,3,22)),
+     new Quote(4, 'Selector take your time, take your time','You are going too fast!!', new Date(2019,3,22)),
+     new Quote(5, 'Moringa School', 'The place to be for all aspiring developers', new Date(2019,3,22)),
+     new Quote(6, 'I know you want my free time','Frech Montana, TY $ Sign, Tinashe', new Date(2019,3,22)),
    ]
    toogleDetails(index){
      this.quotes[index].showDescription = !this.quotes[index].showDescription
