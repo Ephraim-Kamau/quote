@@ -8,12 +8,10 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
 
-  quotes = [new Quote( " ", "Ephraim Kamau", "Leo ni leo msema kesho ni mwongo", "Kamau")]
+  quotes = [new Quote("Kamau", "Ephraim Kamau", "Leo ni leo msema kesho ni mwongo")]
 
 
-     toogleDetails(index){
-        this.quotes[index].showDescription = !this.quotes[index].showDescription
-        }
+
 
      addNewQuote(quote){
             let quoteLength = this.quotes.length;
