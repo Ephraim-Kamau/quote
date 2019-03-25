@@ -14,6 +14,7 @@ export class QuoteDetailsComponent implements OnInit {
 quoteDelete(complete:boolean){
   this.isComplete.emit(complete);
 }
+
   constructor() { }
 
   ngOnInit() {

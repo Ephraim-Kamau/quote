@@ -3,13 +3,12 @@
       <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
             <!-- Name Form -->
             <div class="form-group">
-                <label for="name">Author</label>
+                <label for="name">Person's Name</label>
                   <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
                     <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                      <p>Author name is required</p>
+                      <p>Your name is required</p>
                     </div>
-            <!--Testing  to see if we get data-->
-                Display {{newQuote.name}}
+
 
             </div>
             <div class="form-group">
@@ -22,14 +21,14 @@
             </div>
 
             <div class="form-group">
-                <label for="complete">Submitted by</label>
-                    <input type='date' id="complete"  [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required >
-                        <div [hidden]="timePassed.valid || timePassed.pristine" class="alert alert-danger">
-                            <p> Submission Date is Required</p>
+                <label for="author">Author</label>
+                    <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required >
+                        <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                            <p>Author name is Required</p>
                         </div>
             </div>
 
-            <button type="submit" class="btn btn-success btn-lg">Add Quote</button>
+            <button type="submit" class="btn btn-primary">Add Quote</button>
 
       </form>
     </div>

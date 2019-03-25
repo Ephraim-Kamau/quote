@@ -8,28 +8,47 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
 
-  quotes = [
-       new Quote(1, 'Today is going to be a wonderful day', new Date(2019,3,22)),
-            ]
+  quotes = []
+
 
      toogleDetails(index){
         this.quotes[index].showDescription = !this.quotes[index].showDescription
         }
+        
      addNewQuote(quote){
             let quoteLength = this.quotes.length;
             quote.id=quoteLength+1;
             quote.timePassed = new Date(quote.timePassed);
+            quote.Upvote='';
+            quote.Downvote='';
             this.quotes.push(quote);
 
         }
+        preNum:number
+        lastNum:number
+        counter:number
+
+        upvote(i){
+             this.quotes[i].upvotes+=1
+         }
+         downvote(i){
+           this.quotes[i].downvotes+=1
+         }
+         highestUpvote(){
+        this.preNum = 0
+        this.lastNum = 0
+
+        for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
+          this.lastNum = this.quotes[this.counter].upvotes;
+          if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+    }
+    return  this.preNum
+  }
 
      deleteQuote(isComplete, index){
        if (isComplete){
-          let toDelete=confirm(`Are you sure you want to delete the quote:  ${this.quotes[index].name} ?`)
+          let toDelete=this.quotes.splice(index, 1);
 
-      if(toDelete){
-         this.quotes.splice(index, 1);
-       }
      }
    }
     constructor() { }
