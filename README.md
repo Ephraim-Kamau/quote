@@ -1,10 +1,9 @@
 # Quotes
-QUOTES Web Application
+By Ephraim Kamau
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
-
-# Author
-Ephraim Kamau
+# Description
+This is an application that allows you to create quotes and post them. The quotes can then be voted as good
+or bad depending on the person reading the quote.
 
 ## Development server
 
