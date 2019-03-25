@@ -3,7 +3,7 @@ export class Quote {
   public downvotes:number
   public myDate:Date
   //completeDate is timePassed
-    constructor(public id:string, public name:string, public description:string, public timePassed:Date){
+    constructor(public id:string, public name:string, public description:string){
 
 
       this.upvotes=0
