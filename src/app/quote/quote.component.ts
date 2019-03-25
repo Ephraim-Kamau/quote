@@ -8,7 +8,7 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
 
-  quotes = [new Quote( "Waswahili", "Ephraim Kamau", "Leo ni leo msema kesho ni mwongo")]
+  quotes = [new Quote( " ", "Ephraim Kamau", "Leo ni leo msema kesho ni mwongo", "Kamau")]
 
 
      toogleDetails(index){
