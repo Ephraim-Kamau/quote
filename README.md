@@ -3,7 +3,7 @@ By Ephraim Kamau
 
 # Description
 This is an application that allows you to create quotes and post them. The quotes can then be voted as good
-or bad depending on the person reading the quote.
+or bad depending on the person reading the quote. The quotes can also be deleted by the user.
 
 ## Development server
 
@@ -28,3 +28,16 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# Live Demo
+To view the Quotes page, click here:
+
+# Technologies used
+<ul>
+<li>Angular JS</li>
+<li>HTML</li>
+<li>CSS</li>
+</ul>
+
+# Contact details
+You can contact me at kephraim19@gmail.com
