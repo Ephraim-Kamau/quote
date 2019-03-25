@@ -8,10 +8,6 @@
     <div class="container">
         <div class="row" *ngFor='let quote of quotes; let i = index'>
           <div class="row">
-            <p appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.quote}}</p>
-          <p  *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}</p>
-
-
           </div>
 
     <div class="row">
@@ -20,7 +16,7 @@
       <button class="btn btn-danger" (click) = "downvote(i)">Down vote</button>
       <app-quote-details  [quote]='quote' (isComplete) = 'deleteQuote($event, i)'></app-quote-details>
 
-  
+
 
       </div>
 

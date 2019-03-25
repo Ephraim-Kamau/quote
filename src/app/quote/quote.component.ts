@@ -8,7 +8,7 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
 
-  quotes = []
+  quotes = [new Quote( "Waswahili", "Ephraim Kamau", "Leo ni leo msema kesho ni mwongo")]
 
 
      toogleDetails(index){
@@ -24,9 +24,7 @@ export class QuoteComponent implements OnInit {
             this.quotes.push(quote);
 
         }
-        preNum:number
-        lastNum:number
-        counter:number
+
 
         upvote(i){
              this.quotes[i].upvotes+=1
@@ -34,16 +32,6 @@ export class QuoteComponent implements OnInit {
          downvote(i){
            this.quotes[i].downvotes+=1
          }
-         highestUpvote(){
-        this.preNum = 0
-        this.lastNum = 0
-
-        for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
-          this.lastNum = this.quotes[this.counter].upvotes;
-          if(this.lastNum > this.preNum){this.preNum = this.lastNum}
-    }
-    return  this.preNum
-  }
 
      deleteQuote(isComplete, index){
        if (isComplete){

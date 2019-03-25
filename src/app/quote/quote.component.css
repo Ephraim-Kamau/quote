@@ -4,10 +4,10 @@
 
 .container-fluid{
 
-  text-align: center;
+  text-align: left;
   background-color: white;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 .container{
