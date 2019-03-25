@@ -43,4 +43,4 @@ To view the Quotes page, click here:
 You can contact me at kephraim19@gmail.com
 
 # Licence
-Copyright(c) 2018 Ephraim Kamau
+Copyright (c) 2018 Ephraim Kamau
