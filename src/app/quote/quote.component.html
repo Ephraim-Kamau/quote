@@ -18,8 +18,9 @@
 
       <button class="btn btn-success" (click) = "upvote(i)">Up vote</button>
       <button class="btn btn-danger" (click) = "downvote(i)">Down vote</button>
-                <app-quote-details  [quote]='quote' (isComplete) = 'deleteQuote($event, i)'></app-quote-details>
+      <app-quote-details  [quote]='quote' (isComplete) = 'deleteQuote($event, i)'></app-quote-details>
 
+  
 
       </div>
 
